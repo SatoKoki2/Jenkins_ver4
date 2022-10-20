@@ -17,12 +17,16 @@
 	<!-- version11→8変更 -->
 	<properties>
 		<java.version>8</java.version>
-
 		<!-- JUnit Properties 追加開始 -->
 		<junit.version>4.12</junit.version>
 		<!-- JUnit Properties 追加終了 -->
-	</properties>
 
+		<!--  Jacoco Propeties 追加開始 -->
+		<jacoco-maven.version>0.7.9</jacoco-maven.version>
+		<jacoco.include.package>**/*</jacoco.include.package>
+		<!--  Jacoco Propeties 追加終了 -->
+
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -39,14 +43,14 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Junit Libraries 追加開始-->
+		<!-- Junit Libraries 追加開始 -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<!--<version>${junit.version}</version>-->
 			<scope>test</scope>
 		</dependency>
-		<!-- Junit Libraries 追加終了-->
+		<!-- Junit Libraries 追加終了 -->
 
 	</dependencies>
 
@@ -56,6 +60,21 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<!-- Build Configuration for JaCoCo 追加開始 -->
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>${jacoco-maven.version}</version>
+			<executions>
+				<execution>
+					<id>default-prepare-agent</id>
+					<goals>
+						<goal>prepare-agent</goal>
+					</goals>
+				</execution>
+			</executions>
+			<!-- Build Configuration for JaCoCo 追加終了 -->
+
 		</plugins>
 	</build>
 
