@@ -17,6 +17,7 @@
 	<!-- version11→8変更 -->
 	<properties>
 		<java.version>8</java.version>
+
 		<!-- JUnit Properties 追加開始 -->
 		<junit.version>4.12</junit.version>
 		<!-- JUnit Properties 追加終了 -->
@@ -62,17 +63,19 @@
 			</plugin>
 
 			<!-- Build Configuration for JaCoCo 追加開始 -->
-			<groupId>org.jacoco</groupId>
-			<artifactId>jacoco-maven-plugin</artifactId>
-			<version>${jacoco-maven.version}</version>
-			<executions>
-				<execution>
-					<id>default-prepare-agent</id>
-					<goals>
-						<goal>prepare-agent</goal>
-					</goals>
-				</execution>
-			</executions>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacoco-maven.version}</version>
+				<executions>
+					<execution>
+						<id>default-prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<!-- Build Configuration for JaCoCo 追加終了 -->
 
 		</plugins>
