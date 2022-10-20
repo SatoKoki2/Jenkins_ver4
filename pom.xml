@@ -15,9 +15,9 @@
 	<description>Demo project for Spring Boot</description>
 
 
-	<!-- properties>
+	<properties>
 		<java.version>8</java.version>
-	</properties -->
+	</properties>
 
 
 	<dependencies>
@@ -29,12 +29,21 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Junit Libraries 追加開始-->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<!--<version>${junit.version}</version>-->
+			<scope>test</scope>
+		</dependency>
+		<!-- Junit Libraries 追加終了-->
+
 	</dependencies>
 
 	<build>

@@ -15,6 +15,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 class JenkinsControllerTest {
+	/*このテストはJavaバージョン8で行っており、
+		それに合わせてJREシステム・ライブラリー1.8に変更している*/
 
 	private MockMvc mockMvc;
 
