@@ -14,9 +14,13 @@
 	<name>Jenkins_ver4</name>
 	<description>Demo project for Spring Boot</description>
 
-
+	<!-- version11→8変更 -->
 	<properties>
 		<java.version>8</java.version>
+
+		<!-- JUnit Properties 追加開始 -->
+		<junit.version>4.12</junit.version>
+		<!-- JUnit Properties 追加終了 -->
 	</properties>
 
 
